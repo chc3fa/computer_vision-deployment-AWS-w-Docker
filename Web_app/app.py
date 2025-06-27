@@ -66,18 +66,4 @@ def index():
 
             return render_template('index.html',
                                    filename=file.filename,
-                                   label=label,
-                                   confidence=f"{confidence*100:.2f}%")
-        return redirect(request.url)
-
-    return render_template('index.html')
-    
-
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return redirect(url_for('static', filename=f'uploads/{filename}'))
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080,debug=True)
-
-    
+                                   lab
